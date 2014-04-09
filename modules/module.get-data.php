@@ -56,14 +56,14 @@ function bbpress_livesearch_return_data()
 		$topic_matches[$topic->ID]['url'] = get_post_permalink($topic->ID);
 	}
 	
-	if (!$topic_matches)
+	if (!is_array($topic_matches))
 		$topic_matches = array();
 	
 	/* check to see if any results were recorded by earlier typing */
 	$transient_data = set_transient('bbpress_livesearch_id_'.$_GET['bbpress_livesearch_id'] , $topic_matches);
 	
 	/* merge transient data with new results */
-	if ($transient_data)
+	if (is_array($transient_data))
 		$topic_matches = array_unique(array_merge($topic_matches,$transient_data), SORT_REGULAR);
 		
 	/* set new transient data */

@@ -29,12 +29,14 @@
 			'_bbp_livesearch_beforehtml' => array(
 				'title'             => __( 'HTML to render before livesearch results', 'bbpress' ),
 				'callback'          => 'bbpress_livesearch_admin_setting_beforehtml',
+				'sanitize_callback' => '',
 				'args'              => array()
 			),
 		
 			'_bbp_livesearch_afterhtml' => array(
 				'title'             => __( 'HTML to render after livesearch results', 'bbpress' ),
 				'callback'          => 'bbpress_livesearch_admin_setting_afterhtml',
+				'sanitize_callback' => '',
 				'args'              => array()
 			)
 		);
