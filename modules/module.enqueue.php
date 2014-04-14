@@ -17,7 +17,7 @@ class BBPRESS_LIVESEARCH_ENQUEUE {
 			
 			
 			$before_html = $hours = get_option('_bbp_livesearch_beforehtml','<h3 class="bbpress_livesearch_header">Check out these topics first!</h3>');
-			$after_html = $hours = get_option('_bbp_livesearch_beforehtml','<br><br>');			
+			$after_html = $hours = get_option('_bbp_livesearch_afterhtml','<br><br>');			
 			wp_enqueue_script( 'bbpress_livesearch_frontend', BBPRESS_LIVESEARCH_URLPATH . 'js/hook_live_search.js', array( 'jquery'));
 			 wp_localize_script( 'bbpress_livesearch_frontend', 'bbpress_livesearch', array( 'beforehtml' => $before_html , 'afterhtml' => $after_html ));
 		}
