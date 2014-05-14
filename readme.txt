@@ -1,0 +1,52 @@
+=== bbPress Live Topic Suggestions  ===
+
+Contributors: adbox, japh
+Donate link: hudson.atwell@gmail.com
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: bbpress, live search, auto-suggest, topics
+Requires at least: 3.8
+Tested up to: 3.9
+Stable Tag: 1.0.1
+
+Auto suggest related topics based on user's new topic title. Uses tag regongnition to return results. For best results please use with an auto-tagging plugin.
+
+== Description ==
+
+We developed this tool for our bbPress support forms over at <a href='http://www.inboundnow.com'>Inbound Now</a>. Our goal was to reduce the custom support load by suggesting related topics to the user as he constucted his new topic title. 
+
+Mission accomplished. 
+
+
+= Developers & Designers =
+
+This extension has a plubic GitHub page where users can contribute fixes and improvements. We ask that if you do make improvements that you commit them back for review so everyone can benefit. 
+
+[Follow Development on GitHub ](https://github.com/atwellpub/bbpress-live-suggest-topics "Follow & Contribute to core development on GitHub")
+ | 
+[Follow Developer on Twitter ](https://twitter.com/atwellpub "Follow the developer on Twitter" )
+
+
+== Installation ==
+
+1. Upload `bbpress-live-suggest-topics` folder to the `/wp-content/plugins/` directory
+1. Activate the plugin through the 'Plugins' menu in WordPress
+
+== Frequently Asked Questions ==
+* Do you provide free support for this plugin
+
+No. But we have a public github and we do offer paid support. Contact the plugin developer to commission your work. 
+
+* Does this extension work with the default topic search?
+
+No. We would love to see a drop down live search for bbpress integrated with this plugin. Contact the plugin developer to commission it! 
+
+== Screenshots ==
+
+1. Example of auto-suggested topics.
+
+== Changelog ==
+
+= 1.0.1 =
+
+Released
