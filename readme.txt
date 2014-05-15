@@ -13,7 +13,7 @@ Auto suggest related topics based on user's new topic title. Uses a combination 
 
 == Description ==
 
-We developed this tool for our bbPress support forms over at <a href='http://www.inboundnow.com'>Inbound Now</a>. Our goal was to reduce the custom support load by suggesting related topics to the user as they constucted their new topic title. 
+We developed this tool for our bbPress support forms over at [InboundNow](http://www.inboundnow.com "Inbound Marketing for WordPress"). Our goal was to reduce the custom support load by suggesting related topics to the user as they constucted their new topic title. 
 
 Mission accomplished. 
 
