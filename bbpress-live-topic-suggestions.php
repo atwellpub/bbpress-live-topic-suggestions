@@ -3,7 +3,7 @@
 Plugin Name: bbPress - Live Topic Suggestions
 Plugin URI: https://github.com/atwellpub/bbpress-live-suggest-topics
 Description: Auto suggest related topics based on user's new topic title. Uses tag regongnition & title searches to return results. For best results please use with an auto-tagging plugin.
-Version: 1.0.4
+Version: 1.0.5
 Author: adbox,japh
 Author URI: http://www.twitter.com/atwellpub
 */
@@ -14,7 +14,7 @@ Author URI: http://www.twitter.com/atwellpub
 ---------------------------------------------------------------------------------------------------------
 */ 
 
-define('BBPRESS_LIVESEARCH_CURRENT_VERSION', '1.0.4' );
+define('BBPRESS_LIVESEARCH_CURRENT_VERSION', '1.0.5' );
 define('BBPRESS_LIVESEARCH_LABEL' , 'bbPress Live Topic Suggestions' );
 define('BBPRESS_LIVESEARCH_SLUG' , plugin_basename( dirname(__FILE__) ) );
 define('BBPRESS_LIVESEARCH_URLPATH', WP_PLUGIN_URL.'/'.plugin_basename( dirname(__FILE__) ).'/' );
