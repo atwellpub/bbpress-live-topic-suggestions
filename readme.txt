@@ -7,7 +7,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: bbpress, live search, auto-suggest, topics
 Requires at least: 3.8
 Tested up to: 3.9
-Stable Tag: 1.0.2
+Stable Tag: 1.0.3
 
 Auto suggest related topics based on user's new topic title. Uses a combination of tag regongnition & title string searches to return results. For best results please use with an auto-tagging plugin.
 
