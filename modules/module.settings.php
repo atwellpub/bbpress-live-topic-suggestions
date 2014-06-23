@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 	add_filter('bbp_admin_get_settings_sections', 'bbpress_livesearch_add_setting_section');
 	function bbpress_livesearch_add_setting_section ($sections) 
