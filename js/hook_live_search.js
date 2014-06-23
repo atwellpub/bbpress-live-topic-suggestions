@@ -12,6 +12,9 @@ jQuery(document).ready(function($) {
 		
 			jQuery.each(results, function() {
 					this_html = '<span id="bbpress_liveresult_item"><a href="'+this['url']+'" class="bbp-topic-permalink">'+this['name']+'</a></span><br>';
+					
+					//alert(this['name']);
+					//alert(this['url']);
 					jQuery('#bbpress_livesearch').append(this_html);
 			});
 			

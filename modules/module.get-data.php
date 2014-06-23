@@ -6,11 +6,12 @@ function bbpress_livesearch_return_data()
 {
 	$debug = 0;
 
-	if (!isset($_GET['bbpress_livesearch'])&&$debug!=1) {
+	if (!isset($_GET['bbpress_livesearch'])&&$debug!=1)
 		return;
-	}
-	
+
 	global $wpdb;
+
+
 
 	$title = $_GET['bbp_topic_title'];
 
@@ -55,21 +56,19 @@ function bbpress_livesearch_return_data()
 		$topic_matches[$topic->ID]['url'] = get_post_permalink($topic->ID);
 	}
 
-	if (!is_array($topic_matches)) {
+	if (!is_array($topic_matches))
 		$topic_matches = array();
-	}
-	
+
 	/* check to see if any results were recorded by earlier typing */
-	//$transient_data = get_transient('bbpress_livesearch_id_'.$_GET['bbpress_livesearchid'] );
+	$transient_data = set_transient('bbpress_livesearch_id_'.$_GET['bbpress_livesearchid'] , $topic_matches);
 
 	/* merge transient data with new results */
-	//if (is_array($transient_data))
-		//$topic_matches = array_unique(array_merge($topic_matches,$transient_data), SORT_REGULAR);
+	if (is_array($transient_data))
+		$topic_matches = array_unique(array_merge($topic_matches,$transient_data), SORT_REGULAR);
 
 	/* set new transient data */
-	if (isset($topic_matches) && count($topic_matches)>0) {
-	//	set_transient('bbpress_livesearch_id_'.$_GET['bbpress_livesearchid'] ,  $topic_matches , 60 * 20 * 24 );
-	}
+	if (isset($topic_matches) && count($topic_matches)>0)
+		set_transient('bbpress_livesearch_id_'.$_GET['bbpress_livesearchid'] , 10);
 
 	echo json_encode($topic_matches);
 
