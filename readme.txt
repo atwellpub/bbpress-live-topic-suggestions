@@ -7,7 +7,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: bbpress, live search, auto-suggest, topics
 Requires at least: 3.8
 Tested up to: 3.9
-Stable Tag: 1.0.7
+Stable Tag: 1.0.8
 
 Auto suggest related topics based on user's new topic title. Uses a combination of tag regongnition & title string searches to return results. For best results please use with an auto-tagging plugin.
 
@@ -46,6 +46,10 @@ No. We would love to see a drop down live search for bbpress integrated with thi
 1. Example of auto-suggested topics.
 
 == Changelog ==
+
+= 1.0.8 =
+
+* Removed use of transients. Sites running older versions of this plugin should delete all their transients, they are ineffective and autoloading causing unneccecary backend strain. I used the plugin WP Optimize to delete my transients.
 
 = 1.0.1 =
 
