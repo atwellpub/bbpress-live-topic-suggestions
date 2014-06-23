@@ -47,6 +47,10 @@ No. We would love to see a drop down live search for bbpress integrated with thi
 
 == Changelog ==
 
+= 1.0.8 =
+
+* Removed use of transients. Sites running older versions of this plugin should delete all their transients, they are ineffective and autoloading causing unneccecary backend strain. I used the plugin WP Optimize to delete my transients.
+
 = 1.0.1 =
 
 Released
