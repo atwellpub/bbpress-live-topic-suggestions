@@ -1,5 +1,5 @@
 <?php
-/*
+/* 
 Plugin Name: bbPress - Live Topic Suggestions
 Plugin URI: https://github.com/atwellpub/bbpress-live-topic-suggestions
 Description: Auto suggest related topics based on user's new topic title. Uses tag regongnition & title searches to return results. For best results please use with an auto-tagging plugin.
