@@ -8,13 +8,13 @@ Author: adbox,japh
 Author URI: http://www.twitter.com/atwellpub
 */
 
-/* 
+/*
 ---------------------------------------------------------------------------------------------------------
 - Define constants & include core files
 ---------------------------------------------------------------------------------------------------------
-*/ 
+*/
 
-define('BBPRESS_LIVESEARCH_CURRENT_VERSION', '1.0.7' );
+define('BBPRESS_LIVESEARCH_CURRENT_VERSION', '1.0.8' );
 define('BBPRESS_LIVESEARCH_LABEL' , 'bbPress Live Topic Suggestions' );
 define('BBPRESS_LIVESEARCH_SLUG' , plugin_basename( dirname(__FILE__) ) );
 define('BBPRESS_LIVESEARCH_URLPATH', WP_PLUGIN_URL.'/'.plugin_basename( dirname(__FILE__) ).'/' );
@@ -22,17 +22,17 @@ define('BBPRESS_LIVESEARCH_PATH', WP_PLUGIN_DIR.'/'.plugin_basename( dirname(__F
 
 /* load core files */
 switch (is_admin()) :
-	case true : 
-		/* loads admin files */	
-		include_once('modules/module.settings.php');		
-		
+	case true :
+		/* loads admin files */
+		include_once('modules/module.settings.php');
+
 		BREAK;
 	case false :
-		/* loads frontend files */		
-		include_once('modules/module.print-searchresults.php');	
-		include_once('modules/module.get-data.php');	
-		include_once('modules/module.enqueue.php');	
-		
+		/* loads frontend files */
+		include_once('modules/module.print-searchresults.php');
+		include_once('modules/module.get-data.php');
+		include_once('modules/module.enqueue.php');
+
 		BREAK;
 endswitch;
 
