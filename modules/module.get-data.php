@@ -9,7 +9,7 @@ function bbpress_livesearch_return_data()
 	if (!isset($_GET['bbpress_livesearch'])&&$debug!=1) {
 		return;
 	}
-	
+
 	global $wpdb;
 
 	$title = $_GET['bbp_topic_title'];
@@ -43,7 +43,7 @@ function bbpress_livesearch_return_data()
 					'terms' => $tag_matches
 				)
 			)
-		); 
+		);
 
 		$topics = get_posts( $args );
 	}
@@ -58,7 +58,7 @@ function bbpress_livesearch_return_data()
 	if (!is_array($topic_matches)) {
 		$topic_matches = array();
 	}
-	
+
 	/* check to see if any results were recorded by earlier typing */
 	//$transient_data = get_transient('bbpress_livesearch_id_'.$_GET['bbpress_livesearchid'] );
 
