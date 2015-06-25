@@ -1,26 +1,38 @@
-jQuery(document).ready(function($) {
+jQuery( document ).ready( function( $ ) {
 
-	jQuery(function() {
-	
-		jQuery('#bbp_topic_title').livesearch();
-		
-		jQuery('form[name="new-post"]').bind('livesearch:results', function(e, results) {
-			
-			jQuery('#bbpress_livesearch').empty();
-			
-			jQuery('#bbpress_livesearch').append(bbpress_livesearch.beforehtml);			
-		
-			jQuery.each(results, function() {
-					this_html = '<span id="bbpress_liveresult_item"><a href="'+this['url']+'" class="bbp-topic-permalink">'+this['name']+'</a></span><br>';
-					
-					//alert(this['name']);
-					//alert(this['url']);
-					jQuery('#bbpress_livesearch').append(this_html);
-			});
-			
-			jQuery('#bbpress_livesearch').append(bbpress_livesearch.afterhtml);
-			
-		});
-	});
+	$( function() {
 
-});
+		var liveSearch = $( "#bbpress_livesearch" );
+
+		$( "#bbp_topic_title" ).livesearch();
+
+		liveSearch.parents( "form" ).on( "livesearch:results", function( e, results ) {
+			var html, count;
+
+			liveSearch.empty();
+
+			if ( !$.isEmptyObject( results ) ) {
+				liveSearch.append( bbpress_livesearch.beforehtml );
+			}
+
+			count = 0;
+
+			for ( result in results ) {
+				if ( results.hasOwnProperty( result ) ) {
+					if ( count >= bbpress_livesearch.postlimit ) {
+						break;
+					}
+
+					html = "<span id='bbpress_liveresult_item'><a href='" + results[result].url + "' class='bbp-topic-permalink'>" + results[result].name + "</a></span><br>";
+					liveSearch.append( html );
+
+					count++;
+				}
+			}
+
+			if ( !$.isEmptyObject( results ) ) {
+				liveSearch.append( bbpress_livesearch.afterhtml );
+			}
+		} );
+	} );
+} );
